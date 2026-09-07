@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="img/perfvidres-logo.jpg" alt="Perfect Video Resolution" width="800">
+  <img src="https://raw.githubusercontent.com/huchukato/ComfyUI-PerfectVideoResolution/master/banner.png" alt="Perfect Video Resolution" width="800">
 
 # Perfect Video Resolution
 
