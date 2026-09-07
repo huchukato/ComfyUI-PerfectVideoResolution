@@ -1,0 +1,16 @@
+[project]
+name = "ComfyUI-PerfectVideoResolution"
+description = "Perfect Video Resolution node for ComfyUI — automatically calculates and applies the optimal resolution for video generation models (WAN, HunyuanVideo, LTX-Video, CogVideoX, MiniMax, Mochi) based on aspect ratio and model requirements."
+version = "0.1.0"
+license = {file = "LICENSE"}
+dependencies = []
+
+[project.urls]
+Repository = "https://github.com/huchukato/ComfyUI-PerfectVideoResolution"
+
+[tool.comfy]
+PublisherId = "huchukato"
+DisplayName = "Perfect Video Resolution"
+Icon = "https://raw.githubusercontent.com/huchukato/ComfyUI-PerfectVideoResolution/master/icon.png"
+Banner = "https://raw.githubusercontent.com/huchukato/ComfyUI-PerfectVideoResolution/master/banner.png"
+requires-comfyui = ">=1.0.0"
