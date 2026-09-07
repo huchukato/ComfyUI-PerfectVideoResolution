@@ -5,7 +5,7 @@ NODE_CLASS_MAPPINGS = {
 }
 
 NODE_DISPLAY_NAME_MAPPINGS = {
-    "ComfyUI-PerfectVideoResolution": "ComfyUI-PerfectVideoResolution",
+    "ComfyUI-PerfectVideoResolution": "Perfect Video Resolution",
 }
 
 WEB_DIRECTORY = "./js"
