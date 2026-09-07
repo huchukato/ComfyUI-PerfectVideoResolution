@@ -1,6 +1,16 @@
+<div align="center">
+  <img src="img/perfvidres-logo.jpg" alt="Perfect Video Resolution" width="800">
+
 # Perfect Video Resolution
 
+[![ComfyUI](https://img.shields.io/badge/ComfyUI-Custom%20Node-6c5ce7?style=flat-square)](https://github.com/comfyanonymous/ComfyUI)
+[![Python](https://img.shields.io/badge/Python-3.9%2B-3776AB?style=flat-square&logo=python&logoColor=white)](https://www.python.org/)
+[![GitHub stars](https://img.shields.io/github/stars/huchukato/ComfyUI-PerfectVideoResolution?style=flat-square)](https://github.com/huchukato/ComfyUI-PerfectVideoResolution/stargazers)
+[![Last commit](https://img.shields.io/github/last-commit/huchukato/ComfyUI-PerfectVideoResolution?style=flat-square)](https://github.com/huchukato/ComfyUI-PerfectVideoResolution/commits/master)
+[![Models](https://img.shields.io/badge/Models-Wan%202.2%20%7C%20MiniMax%20H3%20%7C%20LTX-f97316?style=flat-square)](#features)
+
 A unified ComfyUI custom node that combines model-specific video resolution presets with smart image and mask resizing.
+</div>
 
 It merges the functionality of **FindPerfectResolution** and **WanResolutions** into a single node, making it easy to pick the right resolution for **Wan 2.2**, **MiniMax H3**, and **LTX** video generation while also resizing the input image(s) and mask to match.
 
