@@ -433,6 +433,7 @@ class ComfyUI_PerfectVideoResolution:
                 "upscale_method": (["lanczos", "bilinear", "bicubic", "nearest"], {"default": "lanczos"}),
                 "small_image_mode": (["none", "crop", "pad"], {"default": "none"}),
                 "pad_color": ("STRING", {"default": "#000000"}),
+                "use_image_aspect": ("BOOLEAN", {"default": True}),
             },
             "optional": {
                 "image": ("IMAGE",),
@@ -463,6 +464,7 @@ class ComfyUI_PerfectVideoResolution:
         upscale_method: str,
         small_image_mode: str,
         pad_color: str,
+        use_image_aspect: bool,
         image=None,
         image2=None,
         mask=None,
@@ -482,7 +484,7 @@ class ComfyUI_PerfectVideoResolution:
         resolved_resolution_label = resolution
         target_w, target_h = _parse_resolution(presets, aspect_ratio, resolution, fallback_aspect)
 
-        if image_dims is not None:
+        if image_dims is not None and use_image_aspect:
             image_w, image_h = image_dims
             resolved_aspect = _best_aspect_ratio(image_w, image_h, aspect_order, fallback_aspect)
 
