@@ -320,6 +320,14 @@ def _image_dimensions(image) -> Optional[Tuple[int, int]]:
         return None
     dims = tuple(int(v) for v in shape)
     if len(dims) == 4:
+        # Standard ComfyUI layout is B,H,W,C — but some custom loaders emit
+        # channels-first B,C,H,W tensors. Detect by which dim looks like C.
+        if dims[-1] in (1, 3, 4):
+            _, h, w, _ = dims
+            return (w, h)
+        if dims[1] in (1, 3, 4):
+            _, _, h, w = dims
+            return (w, h)
         _, h, w, _ = dims
         return (w, h)
     if len(dims) == 3:
@@ -479,7 +487,9 @@ class ComfyUI_PerfectVideoResolution:
         if divisible_by <= 0:
             divisible_by = default_divisible_by
 
-        image_dims = _image_dimensions(image)
+        # Prefer the primary image input for aspect detection, but fall back
+        # to image2 so a loader wired only there still drives the aspect.
+        image_dims = _image_dimensions(image) or _image_dimensions(image2)
         resolved_aspect = aspect_ratio
         resolved_resolution_label = resolution
         target_w, target_h = _parse_resolution(presets, aspect_ratio, resolution, fallback_aspect)
