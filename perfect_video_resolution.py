@@ -27,18 +27,6 @@ WAN_PRESETS: Dict[str, List[Tuple[int, int, str]]] = {
         (1008, 672, "High Detail"),
         (1168, 768, "Wan 2.2 Native"),
     ],
-    "3:4": [
-        (432, 576, "Fast Draft"),
-        (576, 768, "Preview"),
-        (720, 960, "High Detail"),
-        (816, 1104, "Wan 2.2 Native"),
-    ],
-    "4:3": [
-        (576, 432, "Fast Draft"),
-        (768, 576, "Preview"),
-        (960, 720, "High Detail"),
-        (1104, 816, "Wan 2.2 Native"),
-    ],
     "9:16": [
         (352, 624, "Fast Draft"),
         (480, 848, "Preview"),
@@ -196,7 +184,7 @@ MODEL_CONFIG: Dict[str, Dict] = {
         "default_divisible_by": 32,
     },
     "LTX": {
-        "aspect_order": ("1:1", "2:3", "3:2", "3:4", "4:3", "9:16", "16:9"),
+        "aspect_order": ("1:1", "2:3", "3:2", "9:16", "16:9"),
         "fallback_aspect": "1:1",
         "presets": LTX_PRESETS,
         "default_divisible_by": 32,
