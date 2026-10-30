@@ -547,8 +547,7 @@ class ComfyUI_PerfectVideoResolution:
                 from server import PromptServer
                 memory_size_mb = (image_out.numel() * image_out.element_size()) / (1024 * 1024)
                 PromptServer.instance.send_progress_text(
-                    f"<tr><td>Output: </td>"
-                    f"<td><b>{target_w}</b> x <b>{target_h}</b> | {memory_size_mb:.2f}MB | {target_w*target_h:,} pixels</td></tr>",
+                    f"Output: {target_w} x {target_h} | {memory_size_mb:.2f}MB | {target_w*target_h:,} pixels",
                     unique_id,
                 )
             except Exception:
