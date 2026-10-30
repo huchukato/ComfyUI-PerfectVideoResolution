@@ -1,5 +1,9 @@
 # Update Log
 
+## Version 0.1.3
+
+- Progress text emitted as plain text: the new ComfyUI frontend escapes HTML in progress text (DOMPurify allowlist `a`/`br` only), so the old `<tr><td>` table rows showed as raw tags. The plain `Output: W x H | MB | pixels` line renders cleanly and stays parseable by the resolution free-text path.
+
 ## Version 0.1.2
 
 - Publish workflow: changelog extraction rewritten in plain shell — the embedded Python (`pathlib`/`subprocess`) in the previous workflow was flagged by the registry security scanner (`python_sensitive_file_access`), blocking 0.1.1.
